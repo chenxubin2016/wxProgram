@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view><filed /></view>
+  <view class="my-map-container">
+    <map class='my-map' scale="16" longitude="{{gps.longitude}}" latitude="{{gps.latitude}}"
+      markers="{{gps.markers}}"></map>
+  </view>
+  <view>
+    <button class="button" type="primary" bindtap='saomiao'>扫一扫</button>
+  <button type="default">页面次要操作 Normal</button>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

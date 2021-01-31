@@ -1,0 +1,7 @@
+<!--components/filed/index.wxml-->
+<view>
+  <view wx:for="{{list}}" wx:key="index" wx:for-index="index" wx:for-item="em">
+    <text>{{em.name}}</text>
+    <text>{{em.data}}</text>
+  </view>
+</view>
